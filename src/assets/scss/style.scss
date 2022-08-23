@@ -1,0 +1,56 @@
+/*================================================================================
+
+NOTE:
+------
+PLACE HERE YOUR OWN SCSS CODES AND IF NEEDED, OVERRIDE THE STYLES FROM THE OTHER STYLESHEETS.
+WE WILL RELEASE FUTURE UPDATES SO IN ORDER TO NOT OVERWRITE YOUR STYLES IT'S BETTER LIKE THIS.  */
+.addBtn {
+  position: relative;
+  display: flex;
+  justify-content: center;
+
+  @media screen and (min-width: 768px) {
+    justify-content: flex-end;
+    a {
+      position: absolute;
+      right: 1rem;
+      top: -50px;
+      z-index: 11;
+    }
+  }
+}
+
+.mapView {
+  .leaflet-control-zoom {
+    visibility: hidden;
+    opacity: 0;
+  }
+}
+
+.vue2leaflet-map {
+  &.leaflet-container {
+    height: 400px;
+  }
+}
+
+.map-icon {
+  position: absolute;
+  z-index: 1100;
+  left: 0;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.geo-find-me {
+  margin-left: 4px;
+  position: absolute;
+  z-index: 1101;
+  top: 75px;
+  left: 0px;
+  cursor: pointer;
+  width: 46px;
+  height: 46px;
+}

@@ -1,0 +1,13 @@
+//  ===============================================================================================
+//  File Name: mixins.scss
+//  Description: Extended mixins file with new mixins features.
+//  ----------------------------------------------------------------------------------------------
+//  Item Name: Multilek  - Dashboard
+//  Author: GreatSoft
+//  Author URL: https://greatsoft.uz/en
+//  ================================================================================================
+
+@import 'mixins/_type'; //(NEW)
+
+// Components
+@import 'mixins/_navs';

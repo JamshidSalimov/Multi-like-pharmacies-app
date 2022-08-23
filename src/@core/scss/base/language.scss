@@ -1,0 +1,134 @@
+$blackk: #16191b;
+$dropdown-box-shadoww: 0 5px 25px 0 rgba($blackk, 0.8) !default;
+
+.user_box{
+  position: relative;
+  transition: 0.4s ease all;
+  .lang_header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border: 1px solid #404656;
+    padding: 5px;
+    border-radius: 5px;
+    .globus_flag{
+      padding-left: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      .flag{
+        font-size: 20px;
+      }
+    }
+    .chevron_dovn{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding-left: 10px;
+      &:hover{
+          color: #244a91 !important;
+      }
+    }
+    
+  }
+  .dropDownOne {
+      position: absolute;
+      top: calc(100% + 15px);
+      transform: translateX(-20px);
+      width: 100px;
+      border-radius: 5px;
+      background: #283046;
+      box-shadow: $dropdown-box-shadoww;
+      z-index: 10000 !important;
+      .sub_box{
+        margin: 4px 0;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 6px 4px;
+        .boxx{
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          padding-right: 10px;
+          .flagg {
+              
+              padding-right: 20px;
+              font-size: 20px;
+          }
+        }
+        .box_title{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            span {
+                font-size: 16px;
+            }
+        }
+      &:hover {
+        background: #27355a;
+        .box_title{
+          span{
+              color: #244a91 !important;
+          }
+        }
+      }
+      }
+      
+      // .bac_box1{
+      //   border-radius: 5px;
+      //   background: #fff;
+      //   padding: 5px 0;
+
+      //   .sub_box1{
+      //   margin: 4px 0;
+      //   width: 100%;
+      //   display: flex;
+      //   align-items: center;
+      //   justify-content: center;
+      //   padding: 6px 4px;
+      //   .boxx1{
+      //     display: flex;
+      //     align-items: center;
+      //     justify-content: center;
+      //     padding-right: 10px;
+      //     .flagg {
+              
+      //         padding-right: 20px;
+      //         font-size: 20px;
+      //     }
+      //   }
+      //   .box_title1{
+      //       display: flex;
+      //       align-items: center;
+      //       justify-content: center;
+      //       span {
+      //           font-size: 16px;
+      //           font-weight: 500;
+      //       }
+      //   }
+      // &:hover {
+      //   background: #d0e2ec;
+      //   .box_title1{
+      //     span{
+      //         color: #244a91 !important;
+      //     }
+      //   }
+      // }
+      // }
+      // }
+      
+  }
+}
+@media screen and (max-device-width:575px) {
+  .user_box{
+    .dropDownOne{
+      transform: translateX(-35px);
+    }
+  }
+  .globus_flag{
+    display: none !important;
+  }
+}

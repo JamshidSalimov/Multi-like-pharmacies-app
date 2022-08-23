@@ -1,0 +1,20 @@
+image: docker:stable
+services:
+  - docker:dind
+
+stages:
+  - deploy
+
+variables:
+  DOCKER_HOST: tcp://docker:2375
+  DOCKER_DRIVER: overlay2
+
+deploy:
+  stage: deploy
+  script:
+    # Set right chmod on SSH key file
+    - chmod 400 $MASTER_SSH_KEY
+    # Download and run new image
+    - ssh -o StrictHostKeyChecking=no -i $MASTER_SSH_KEY "${MASTER_SSH_USER}@${MASTER_HOST}" "cd multilek-pharmacy-dashboard && git pull && cd ../multilek-pharmacy-backend && docker-compose -f docker-compose.yml up -d --build dashboard"
+  only:
+    - main
